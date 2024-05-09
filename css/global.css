@@ -8,8 +8,10 @@
     scroll-behavior: smooth;
 }
 
-img {
+
+    /* Тимчасово відкючив - 1savchuk */
+/* img {
     display: block;
-    /* Тимчасово відключив */
-    /* width: 100%; */
-}
+    width: 100%; 
+} */
+
