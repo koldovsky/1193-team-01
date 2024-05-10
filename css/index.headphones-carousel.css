@@ -1,0 +1,44 @@
+.headphones__title {
+    text-align: center;
+}
+
+.headphones__title h2{
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+
+.headphones__title p {
+    font-size: 19px;
+    padding-top: 5px;
+}
+
+.headphones-carousel {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    gap: 15px;
+}
+
+.headphones-carousel__slides {
+    display: flex;
+    gap: 25px;
+}
+
+.headphones-carousel__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headphones-carousel__slide-img {
+    width: 85%;
+}
+
+.headphones-carousel__slide-title {
+    text-align: center;
+    font-size: 17px;
+}
+
+.headphones-carousel__slide a {
+    text-decoration: none;
+}
