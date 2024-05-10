@@ -17,39 +17,44 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <header
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
       data-hx-get="index.header.partial.html"
     ></header>
-
     <main>
       <div
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.low-price.partial.html"
       ></div>
-
       <div
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.product-tabs.partial.html"
       ></div>
-
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.info-columns.partial.html"
+      ></div>
       <div
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.special-offers.partial.html"
       ></div>
-
       <div
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.headphones-carousel.partial.html"
       ></div>
     </main>
-
-    <!--<footer></footer>-->
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="index.footer.partial.html"
+    ></footer>
   </body>
 </html>
