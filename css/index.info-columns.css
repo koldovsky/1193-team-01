@@ -1,0 +1,17 @@
+.info-columns {
+    margin: 30px 0 90px 0;
+}
+
+.info-columns__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-columns__image {
+  max-width: 425px;
+  min-height: 255px;
+  background-image: url("../img/index.info-columns/girl_column.png");
+  background-size: cover; /* or contain */
+  background-position: top center; /* or other positions */
+  background-repeat: no-repeat;
+}
