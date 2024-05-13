@@ -1,8 +1,30 @@
 .main__product {
   display: flex;
+  padding: 20px;
+  padding-top: 100px;
+}
+
+@media (min-width: 770px) {
+  .main__product {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.main__container {
+  min-width: 260px;
+  max-width: 1200px;
+}
+
+.main__product-section {
+  display: flex;
   flex-direction: column;
-  margin: 20px;
-  margin-top: 100px;
+}
+
+@media (min-width: 770px) {
+  .main__product-section {
+    flex-direction: row;
+  }
 }
 
 .main__product-link {
@@ -10,10 +32,11 @@
   text-decoration: none;
   font-size: 20px;
 }
-s .main__product-carousel {
+.main__product-carousel {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 750px;
 }
 
 .arrow-svg_left {
@@ -22,16 +45,35 @@ s .main__product-carousel {
 
 .arrow-svg_left,
 .arrow-svg_right {
-  margin-bottom: 100px;
+  align-items: center;
 }
 
-.main__product-image {
-  max-width: 250px;
+.main__product-container {
+  max-width: 540px;
+  flex: 1;
 }
 
+.main__product-image,
 .main__product-images {
-  max-width: 50px;
+  width: 100%;
+}
+
+.main__product-img {
+  width: 18%;
+  max-width: 108px;
   border: var(--product-border-img) solid 1px;
+}
+
+@media (min-width: 770px) {
+  .main__product-section__left {
+    max-width: 570px;
+    margin-right: 30px;
+  }
+
+  .main__product-img { 
+    min-height: 39px;
+    max-height: 79px;
+  }
 }
 
 .main__product-section__right {
@@ -39,7 +81,7 @@ s .main__product-carousel {
 }
 
 .main__product-check {
-  color: #61a854;
+  color: var(--stock-color);
 }
 
 .main__product-title {
@@ -53,19 +95,20 @@ s .main__product-carousel {
 
 .main__product-form {
   padding: 40px 0;
-  border-top: var(--underline-product) solid 1px;
+  border-top: 1px solid var(--underline-product);
 }
 
 .main__product-number {
-  max-width: 64px;
-  min-height: 53px;
-  padding: 15px;
+  max-width: 60px;
+  min-height: 54px;
+  padding: 10px;
+  margin-right: 10px;
   text-align: center;
 }
 
 .main__product-button {
-  min-width: 296px;
-  min-height: 53px;
+  min-width: 196px;
+  min-height: 54px;
   border: none;
   background-color: var(--bottom-color);
   color: #fff;
@@ -76,10 +119,10 @@ s .main__product-carousel {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 5px;
-  border-bottom: var(--underline-product) solid 1px;
+  border-bottom: 1px solid var(--underline-product);
 }
 
 .main__product-subtitle__underline-text {
-  padding-bottom: 5px;
-  border-bottom: var(--description-line) solid 1px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--description-line);
 }
