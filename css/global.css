@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,4 +9,10 @@
 
 :root {
     scroll-behavior: smooth;
+    --link-color: #2a2a2a;
+    --product-border-img: #464c5c;
+    --stock-color: #61a854;
+    --bottom-color: #2877b6;
+    --underline-product: #edf0f5;
+    --description-line: #2877b6;
 }

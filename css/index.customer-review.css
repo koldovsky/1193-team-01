@@ -1,0 +1,25 @@
+.customer-review__title {
+    text-align: center;
+
+    h2 {
+        font-family: 'Heebo', sans-serif;
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    p {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 19px;
+        line-height: 26px;
+    }
+}
+
+.customer-review__slide-img {
+    width: 8%;
+    border-radius: 50%;
+}
+
+.customer-review__slides {
+    padding: 3rem;
+    display: flex;
+}

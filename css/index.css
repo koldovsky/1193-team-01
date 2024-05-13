@@ -1,10 +1,10 @@
 @import "global.css";
-@import "index.special-offers.partial.css";
 @import "index.header.css";
-<<<<<<< HEAD
-@import "index.footer.partial.css";
-=======
+@import "index.special-offers.partial.css";
 @import "index.product-tabs.partial.css";
+@import "index.info-columns.css";
 @import "index.headphones-carousel.css";
 @import "index.low-price.css";
->>>>>>> abf74c393c43a75d3eeaa572c5fd63dfa8a924ae
+@import "index.customer-review.css";
+@import "index.footer.partial.css";
+@import "index.product-discount.css"

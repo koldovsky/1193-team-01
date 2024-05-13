@@ -1,3 +1,8 @@
+.headphones {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
 .headphones__title {
     text-align: center;
 }
@@ -5,11 +10,14 @@
 .headphones__title h2{
     font-size: 60px;
     padding-bottom: 20px;
+    font-family: 'Heebo', sans-serif;
 }
 
 .headphones__title p {
     font-size: 19px;
     padding-top: 5px;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 26px;
 }
 
 .headphones-carousel {
@@ -32,13 +40,20 @@
 
 .headphones-carousel__slide-img {
     width: 85%;
+    display: block;
+    margin: 0 auto;
 }
 
 .headphones-carousel__slide-title {
     text-align: center;
     font-size: 17px;
+    font-family: "PT Sans", sans-serif;
+    margin-top: 24px;
+    line-height: 26px;
 }
 
 .headphones-carousel__slide a {
     text-decoration: none;
+    font-family: "PT Sans", sans-serif;
+    color: rgb(42, 42, 42);
 }
