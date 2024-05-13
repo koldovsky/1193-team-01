@@ -1,4 +1,41 @@
-.castomer-care {
+.background {
+    width: 100%;
+    background-color: rgb(242, 242, 242);
+    height: 60px;
     display: flex;
-    width: 390px;
 }
+
+.column__castomer-care {
+    flex: 0 0 33.33%;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    color: rgb(42, 42, 42);
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.column__castomer-care span {
+    display: block;
+    margin: 0 auto;
+}
+
+.under-container {
+    width: 100%;
+    background-color: white;
+    height: 135px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.column__under-container {
+    flex: 1;
+    margin: 0 0px;
+    text-align: center;
+}
+.column__under-container img {
+    display: block;
+    margin: 0 auto;
+  }
