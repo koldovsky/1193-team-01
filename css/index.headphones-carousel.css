@@ -8,7 +8,7 @@
 .headphones__title {
     text-align: center;
 
-    h2{
+    h2 {
         font-size: 40px;
         font-weight: 900;
         line-height: 48px;
@@ -28,7 +28,6 @@
         font-size: 19px;
         padding-top: 5px;
         font-family: 'PT Sans', sans-serif;
-        line-height: 26px;
     }
 }
 
@@ -48,8 +47,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid rgb(242, 242, 242);
-    padding: 31px 29px;
+    justify-content: space-between;
+    border: 2px solid var( --back-mindblowing-icon);
+    padding: 50px 29px;
 
     a {
         text-decoration: none;
@@ -60,52 +60,60 @@
     a:hover {
         text-decoration: underline;
     }
+}
 
-    .headphones-carousel__slide-img {
-        width: 85%;
-        display: block;
-        margin: 0 auto;
-    }
-    
-    .headphones-carousel__slide-title {
-        text-align: center;
-        font-size: 17px;
-        font-family: "PT Sans", sans-serif;
-        margin-top: 24px;
-        line-height: 26px;
-    }
-
-    .headphones-carousel__slide-price {
-        font-size: 19px;
-        font-weight: 700;
-        line-height: 26px;
-        color: #2877b6;
-        font-family: "PT Sans", sans-serif;
-    }
-
-    .headphones-carousel__slide-button {
-        margin-top: 20px;
-    }
-
-    .headphones-carousel__button-title {
-        background-color: rgb(235, 81, 18);
-        color: white;
-        padding: 20px 30px;
-        border: none;
-        text-transform: uppercase;
-        font-family: "PT Sans", sans-serif;
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 15px;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: .3s;
-    }
-
-    .headphones-carousel__button-title:hover{
-        background-color: #2a2a2a;
+@media (min-width: 320px) {
+    .headphones-carousel__slide:not(:first-child) {
+       display: none;
     }
 }
 
+.headphones-carousel__slide-img {
+    width: 85%;
+    display: block;
+    margin: auto;
+}
 
+.headphones-carousel__slide-title {
+    text-align: center;
+    font-size: 17px;
+    font-family: "PT Sans", sans-serif;
+    margin-top: 24px;
+    line-height: 26px;
+}
 
+.headphones-carousel__slide-price {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #2877b6;
+    font-family: "PT Sans", sans-serif;
+}
+
+.headphones-carousel__slide-button {
+    margin-top: 20px;
+}
+
+.headphones-carousel__button-title {
+    background-color: var( --accent-color);
+    color: white;
+    padding: 20px 30px;
+    border: none;
+    text-transform: uppercase;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.headphones-carousel__button-title:hover{
+    background-color: var(--link-color);
+}
+
+.headphones-carousel__arrow-left {
+    rotate: 180deg;
+}
