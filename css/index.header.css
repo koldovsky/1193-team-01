@@ -1,4 +1,24 @@
-.castomer-care {
+/*.castomer-care {
     display: flex;
+    flex-direction: row;
     width: 390px;
+    font-size: 16px;
+    color:rgb(42, 42, 42);
+    font-stretch: 100%;
+    font-weight: 400;
+    width: 390px;
+    align-items: center;
+}*/
+
+.background {
+    width: 100% ;
+    background-color: rgb(242, 242, 242);
+    height: 60px;
 }
+
+.column__castomer-care  {
+    flex: 0 0 33.33%; 
+    text-align: center; 
+    padding: 10px; 
+    border: 1px solid black;
+  }
