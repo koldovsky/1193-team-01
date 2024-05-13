@@ -1,9 +1,115 @@
-.product-tabs__tab{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
+.product-tabs {
+  padding: 60px 0;
 }
 
-.product-item__image{
-    width: 200px;
+.product-tabs__container {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.product-tabs__navigation {
+  border-bottom: 1px solid var(--link-color);
+}
+
+.product-tabs__button {
+  position: relative;
+  display: inline-block;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  font-weight: 700;
+  background: none;
+  color: var(--link-color);
+  padding: 15px 20px;
+  opacity: 0.6;
+  cursor: pointer;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-color);
+    opacity: 0;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.product-tabs__button--active {
+  opacity: 1;
+  &::after {
+    opacity: 1;
+  }
+}
+
+.product-tabs__tab {
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+  display: none;
+}
+
+.product-tabs__tab--active {
+  display: grid;
+}
+
+.product-tabs__content {
+  margin-top: 40px;
+}
+
+.product-item {
+  padding: 31px 29px;
+  border: 1px solid var(--product-grid-border);
+  .product-item__image-link {
+    margin-bottom: 20px;
+  }
+  .product-item__image {
+    width: 100%;
+    display: block;
+  }
+  .product-item__name-link {
+    font-size: 19px;
+    color: var(--link-color);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .product-item__price {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bottom-color);
+  }
+  .product-item__button {
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-tabs__container {
+    padding: 0 32px;
+  }
+  .product-tabs__tab {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .product-tabs__container {
+    padding: 0 40px;
+  }
+  .product-tabs__tab {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-tabs__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
