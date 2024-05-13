@@ -18,12 +18,4 @@
   --accent-color: #eb5112;
   --product-grid-border: #f2f2f2;
   font-family: "PT Sans", sans-serif;
-    scroll-behavior: smooth;
-    --link-color: #2a2a2a;
-    --product-border-img: #464c5c;
-    --stock-color: #61a854;
-    --bottom-color: #2877b6;
-    --underline-product: #edf0f5;
-    --description-line: #2877b6;
-    font-family:"PT Sans", sans-serif;
 }
