@@ -1,7 +1,6 @@
 .main__product {
   display: flex;
-  padding: 20px;
-  padding-top: 100px;
+  padding: 100px 20px 50px;
 }
 
 @media (min-width: 770px) {
