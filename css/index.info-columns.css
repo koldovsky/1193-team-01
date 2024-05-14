@@ -7,19 +7,53 @@
   flex-direction: column;
 }
 
+@media (min-width: 770px) {
+  .info-columns__column {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
 .info-columns__image {
   max-width: 100%;
-  min-height: 192px;
-  max-height: 454px;
+  height: 500px;
   background-image: url("../img/index.info-columns/girl_column.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 }
 
+@media (min-width: 770px) {
+  .info-columns__image {
+    min-width: 385px;
+    max-width: 1074px;
+    min-height: 1220px;
+    flex: 1;
+  }
+}
+
 .info-columns__content {
   padding: 100px 30px 90px;
   background-color: var(--back-mindblowing-icon);
+}
+
+
+
+@media (min-width: 770px) {
+  .info-columns__content {
+    min-height: 1220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .info-columns__content-container {
+    min-width: 320px;
+    max-width: 570px;
+  }
 }
 
 .info-columns__title {
@@ -29,6 +63,18 @@
   font-weight: 900;
   font-style: normal;
   margin-bottom: 20px;
+}
+
+@media (min-width: 770px) {
+  .info-columns__title {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .info-columns__title {
+    font-size: 60px;
+  }
 }
 
 .info-columns__sound {
@@ -58,13 +104,34 @@
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  background-color: #fff;
+  background-color: var(--color-jbl-section);
   border-radius: 50%;
 }
 
 .info-columns__li {
   min-width: 195px;
 }
+
+.info-columns__column-img {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 770px) {
+  .info-columns__column-img {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-columns__content-img {
+    min-width: 306px;
+    max-width: 500px;
+    flex: 1;
+  }
+}
+
+
 
 .info-columns__subtitle,
 .info-columns__subtitle-jbl,
