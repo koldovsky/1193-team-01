@@ -1,16 +1,26 @@
 .customer-review__title {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h2 {
         font-family: 'Heebo', sans-serif;
-        font-size: 60px;
-        line-height: 72px;
+        font-size: 40px;
+        text-align: center;
+        color: var(--text-color);
     }
 
     p {
         font-family: 'PT Sans', sans-serif;
         font-size: 19px;
-        line-height: 26px;
+        text-align: center;
+        color: var(--text-color);
+    }
+}
+@media (min-width: 768px) {
+    .customer-review__title h2 {
+        font-size: 60px;
     }
 }
 
