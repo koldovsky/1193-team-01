@@ -1,15 +1,7 @@
-:root {
-  --offer-color: rgb(73, 73, 73);
-  --old-price-color: rgb(108, 108, 108);
-  --text-title-color: #2f2f2f;
-  --text-dark-color: #2a2a2a;
-}
-
 .product-card {
   display: flex;
   flex-direction: column;
 }
-
 
 .product-card__item {
   display: flex;
@@ -17,7 +9,6 @@
   margin: 75px 0px 0px 45px;
   white-space: nowrap;
 }
-
 
 .product-card__background {
   margin: 25px;
@@ -34,12 +25,10 @@
 
 .product-card__background-item-2 {
   background-image: url(../img/index.special-offers/sony-headphones.png);
-
 }
 
 .product-card__background-item-3 {
   background-image: url(../img/index.special-offers/sony-speaker.png);
-
 }
 
 .product-card__item h4 {
@@ -69,7 +58,6 @@
   text-decoration: line-through;
   font-size: 15px;
   margin-right: 10px;
-  
 }
 
 .product-card__item h3 {
@@ -87,7 +75,6 @@
 .product-card__shop-now-button {
   font-size: 13px;
   font-family: "PT Sans", sans-serif;
-  line-height: 15.6px;
   letter-spacing: 0.91px;
   font-weight: bold;
   text-transform: uppercase;
@@ -95,7 +82,7 @@
   text-decoration: none;
 }
 
-.product-card__shop-now-button a{
+.product-card__shop-now-button a {
   text-decoration: none;
   color: var(--text-dark-color);
 }
@@ -144,7 +131,7 @@
     margin-right: 30px;
   }
 
-  .product-card__background-item-3{
+  .product-card__background-item-3 {
     margin: 15px 30px 0px;
     background-position: center;
     background-size: cover;
@@ -158,23 +145,23 @@
     flex-wrap: nowrap;
   }
 
-  .product-card__background-item-1{
+  .product-card__background-item-1 {
     margin: 25px;
   }
 
-  .product-card__background-item-2{
+  .product-card__background-item-2 {
     margin: 25px 0 25px 0;
   }
 
-  .product-card__background-item-3{
+  .product-card__background-item-3 {
     margin: 25px;
   }
 
-  .product-card__background{
+  .product-card__background {
     min-height: 344px;
   }
 
-  .product-card__item h3{
+  .product-card__item h3 {
     font-size: 38px;
     font-weight: 800;
   }
