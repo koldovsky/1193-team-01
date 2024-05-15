@@ -1,35 +1,31 @@
 .background {
     width: 100%;
-    background-color: rgb(242, 242, 242);
+    background-color:var(--header-background-color);
     height: 60px;
     display: flex;
 }
-
 .column__castomer-care {
     flex: 0 0 33.33%;
     text-align: center;
     padding: 10px;
     font-size: 13px;
-    color: rgb(42, 42, 42);
+    color: var(--castomer-care-color);
     align-items: center;
     font-weight: bold;
     letter-spacing: 2px;
 }
-
 .column__castomer-care span {
     display: block;
     margin: 0 auto;
 }
-
 .under-container {
     width: 100%;
-    background-color: white;
+    background-color: footer-text-color;
     height: 135px;
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
 }
-
 .column__under-container {
     flex: 1;
     margin: 0 0px;
