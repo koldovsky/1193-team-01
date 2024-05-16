@@ -107,6 +107,8 @@
 
 .main__product-button {
   min-width: 196px;
+  width: 70%;
+  display: inline-block;
   min-height: 54px;
   border: none;
   background-color: var(--bottom-color);
