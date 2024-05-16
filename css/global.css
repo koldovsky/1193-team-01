@@ -9,6 +9,8 @@
 
 :root {
   scroll-behavior: smooth;
+  --castomer-care-color: rgb(242, 242, 242);
+  --header-background-color:rgb(242, 242, 242);
   --link-color: #2a2a2a;
   --product-border-img: #464c5c;
   --stock-color: #61a854;
@@ -25,7 +27,7 @@
   --bottom-color-models: #2a2a2a;
   --main-text-color: #2f2f2f;
   font-family: "PT Sans", sans-serif;
-  --background-color: #2a2a2a;
+  --footer-background-color: #2a2a2a;
   --footer-text-color: #ffffff;
   --icon-color:#2877b6;
   --offer-color: rgb(73, 73, 73);
