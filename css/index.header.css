@@ -24,15 +24,14 @@
 .under-container {
     width: 100%;
     background-color: var(--castomer-care--background-color);
+    justify-content: space-between;
     height: 135px;
     display: flex;
     align-items: center;
     padding: 0 50px;
 
     .column__under-container {
-        flex: 1;
-        margin: 0 0px;
-        text-align: center;
+        flex-grow: 1;
     }
 
     .column__under-container img {
@@ -42,24 +41,26 @@
 
     .social-networks {
         display: flex;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+        width: 30px;
 
         li {
-            margin-right: 10px;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
         }
-
-        li:last-child {
-            margin-right: 0;
+        .logo_fb img {
+            fill: rgb(235, 81, 18);
         }
     }
 
-
     .nav-title {
-        flex-grow: 1;
         display: flex;
-        li {
+        justify-content: center;
+        flex-grow: 1;
+
+        .nav-title ul {
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -81,16 +82,4 @@
     justify-content: space-between;
 }
 
-.social-networks {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.social-networks li {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
 
