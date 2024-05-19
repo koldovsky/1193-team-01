@@ -5,7 +5,6 @@
     display: flex;
 }
 
-
 .column__castomer-care {
     color: var(--castomer-care-color);
     font-weight: bold;
@@ -14,7 +13,6 @@
     font-size: 13px;
     flex: 0 50%;
 }
-
 
 .tel-column__castomer-care {
     padding: 0 20px;
@@ -26,11 +24,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-
-
-.email-column__castomer-care {
     white-space: nowrap;
+
+    span {
+        width: 5px;
+    }
 }
 
 .under-container {
@@ -92,27 +90,29 @@
         align-items: center;
 
         li {
-            flex: 1;
             display: flex;
-            margin: 5px;
+            margin: 0px;
             padding: 5px;
         }
 
-        .networks-logo a,
-        .networks-logo img {
+        .networks-logo {
+            position: relative;
+          }
+
+        .networks-logo a img {
+            position: relative;
             margin: 0;
             padding: 0;
+            display: block;
+            width: 100%;
+            z-index: 1;
         }
 
         .background-white {
             width: 25px;
             height: 25px;
             background-color: var(--header-networks-background-color);
-            position: absolute;
         }
-
-        justify-content: center;
-        flex-grow: 1;
 
         .nav-title ul {
             display: flex;
@@ -123,31 +123,24 @@
             margin: 0;
         }
 
-        .networks-logo {
-            position: relative;
-        }
-        .networks-logo a img {
-            position: relative;
-            z-index: 1;
-          }
-          .background-white {
+        .background-white {
             position: absolute;
-            top: 10px;;
-            left: 12px;
+            top: 12px;
+            left: 10px;
             width: 50%;
-            height:50%;
-            background-color: white;
+            height: 50%;
+            background-color: var(--header-networks-background-color);
             z-index: 0;
-          }
-          
-          .background-white:last-child{
-            top: 12px;;
-            width: 40%;
-            height:40%;
-          }
-    
-    }
+        }
 
+        .networks-logo:last-child .background-white {
+            top: 12px;
+            left: 15px;
+            width: 40%;
+            height: 40%;
+          }
+        
+    }
 }
 
 .column__under-container:first-child {
