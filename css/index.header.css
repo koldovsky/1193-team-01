@@ -21,6 +21,8 @@
     margin: 0 auto;
 }
 
+
+
 .under-container {
     width: 100%;
     background-color: var(--castomer-care--background-color);
@@ -28,30 +30,48 @@
     height: 135px;
     display: flex;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 20px;
 
-    .column__under-container {
-        flex-grow: 1;
+    .logo-column__under-container {
+        width: 25%;
     }
 
-    .column__under-container img {
-        display: block;
-        margin: 0 auto;
+    .nav-column__under-container {
+        width: 50%;
+
+        .nav-title {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-title li {
+            margin-right: 10px; 
+          }
+
     }
+
+
+
 
     .social-networks {
         display: flex;
-        width: 30px;
+        justify-content: center;
+        align-items: center;
 
         li {
             flex: 1;
             display: flex;
-            justify-content: center;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .networks-logo a,
+        .networks-logo img {
             margin: 0;
             padding: 0;
-        }
-        .logo_fb img {
-            fill: rgb(235, 81, 18);
+            background-color: var(--header-networks-background-color);
         }
     }
 
@@ -78,8 +98,5 @@
 }
 
 .column__under-container:last-child {
-    width: 50px;
     justify-content: space-between;
 }
-
-
