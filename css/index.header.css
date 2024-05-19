@@ -26,19 +26,59 @@
     background-color: var(--castomer-care--background-color);
     height: 135px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     padding: 0 50px;
+
+    .column__under-container {
+        flex: 1;
+        margin: 0 0px;
+        text-align: center;
+    }
+
+    .column__under-container img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .social-networks {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-right: 10px;
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+    }
+
+
+    .nav-title {
+        flex-grow: 1;
+        display: flex;
+        li {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
 }
 
-.column__under-container {
-    flex: 1;
-    margin: 0 0px;
-    text-align: center;
+.column__under-container:first-child {
+    margin-left: 0;
+    justify-content: flex-start;
 }
 
-.column__under-container img {
-    display: block;
-    margin: 0 auto;
+.column__under-container:last-child {
+    width: 50px;
+    justify-content: space-between;
 }
 
 .social-networks {
@@ -46,10 +86,11 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    li {
-        margin-right: 10px;
-    }
-    li:last-child {
-        margin-right: 0;
-    }
 }
+
+.social-networks li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
