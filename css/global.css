@@ -10,7 +10,8 @@
 :root {
   scroll-behavior: smooth;
   --castomer-care-color: rgb(242, 242, 242);
-  --header-background-color:rgb(242, 242, 242);
+  --castomer-care--background-color: rgb(242, 242, 242);
+  --header-background-color:rgb(42, 42, 42);
   --link-color: #2a2a2a;
   --product-border-img: #464c5c;
   --stock-color: #61a854;
