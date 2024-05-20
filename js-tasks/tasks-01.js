@@ -1,6 +1,23 @@
-// https://www.codewars.com/kata/55f9b48403f6b87a7c0000bd/train/javascript
+//https://www.codewars.com/kata/grasshopper-messi-goals-function/train/javascript
 
-function paperwork(n, m) {
-  if (n < 0 || m < 0) return 0;
-  return n * m;
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
+
+//https://www.codewars.com/kata/55685cd7ad70877c23000102/train/javascript
+
+function makeNegative(num) {
+  return num > 0 ? -num : num;
+}
+
+//https://www.codewars.com/kata/grasshopper-terminal-game-move-function/train/javascript
+
+function move(position, roll) {
+  return position + 2 * roll;
+}
+
+//https://www.codewars.com/kata/keep-hydrated-1/train/javascript
+
+function litres(time) {
+  return Math.floor(time * 0.5);
 }
