@@ -34,12 +34,6 @@ function min(arr, returnType) {
   }
 }
 
-//https://www.codewars.com/kata/convert-a-string-to-an-array/train/javascript
-//v2 - Taras
-function stringToArray(string) {
-  return string.split(" ");
-}
-
 //https://www.codewars.com/kata/dna-to-rna-conversion/train/javascript
 //v2 - Taras
 
