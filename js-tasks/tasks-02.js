@@ -11,5 +11,27 @@ function DNAtoRNA(dna) {
 }
 
 //https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
+//v1 - Ivan
+function min(arr) {
+  return Math.min(...arr);
+}
 
-//here is some mistake
+function max(arr) {
+  return Math.max(...arr);
+}
+
+
+
+//https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
+//v1 - Ivan
+function min(arr, returnType) {
+  let minValue = Math.min(...arr);
+  if (returnType == 'value') {
+      return minValue;
+  } else if (returnType == 'index') {
+      let minIndex = arr.indexOf(minValue);
+      return minIndex;
+  } else {
+      return "Please provide 'value' or 'index'.";
+  }
+}
