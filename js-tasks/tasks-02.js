@@ -76,19 +76,19 @@ function min(arr, toReturn) {
   if (toReturn === "index") return minIndex;
 }
 
-https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
+//https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
 function getRealFloor(n) {
   if (n >= 1 && n < 13) return n - 1;
   if (n > 13) return n - 2;
   return n;
 }
 
-//www.codewars.com/kata/5545f109004975ea66000086/train/javascript
-https: function isDivisible(n, x, y) {
+//https://www.codewars.com/kata/5545f109004975ea66000086/train/javascript
+function isDivisible(n, x, y) {
   return n % x === 0 && n % y === 0;
 }
 
-//www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
-https: function past(h, m, s) {
+//https:www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
+function past(h, m, s) {
   return s * 1000 + m * 60 * 1000 + h * 60 * 60 * 1000;
 }
