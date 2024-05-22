@@ -36,7 +36,6 @@ function min(arr, returnType) {
 
 //https://www.codewars.com/kata/dna-to-rna-conversion/train/javascript
 //v2 - Taras
-
 function DNAtoRNA(dna) {
   return dna
     .split("")
@@ -64,7 +63,6 @@ var max = function (list) {
 
 //https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
 //v2 - Taras
-
 function min(arr, toReturn) {
   let minNum = arr[0];
   let minIndex = 0;
@@ -76,4 +74,21 @@ function min(arr, toReturn) {
   });
   if (toReturn === "value") return minNum;
   if (toReturn === "index") return minIndex;
+}
+
+https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
+function getRealFloor(n) {
+  if (n >= 1 && n < 13) return n - 1;
+  if (n > 13) return n - 2;
+  return n;
+}
+
+//www.codewars.com/kata/5545f109004975ea66000086/train/javascript
+https: function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0;
+}
+
+//www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
+https: function past(h, m, s) {
+  return s * 1000 + m * 60 * 1000 + h * 60 * 60 * 1000;
 }
