@@ -1,0 +1,92 @@
+.product-card-discount__container{
+    padding: 30px 0px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product-card-discount__product-1 {
+  background-image: url(../img/index.product-discount/airpulse-r255-wireless.webp);
+}
+.product-card-discount__product-2 {
+  background-image: url(../img/index.product-discount/bose-speaker-g656-a.webp);
+}
+.product-card-discount__product-3 {
+  background-image: url(../img/index.product-discount/sennheiser-sb25-wireless.webp);
+}
+.product-card-discount__product{
+  background-size: cover;
+  min-height: 370.94px;
+  width: 363px;
+  margin: 0px 15px;
+}
+
+.product-card-discount__product-type {
+  font-size: 13px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+.product-card-discount__product-type-1 {
+  color:var(--icon-color);
+}
+.product-card-discount__product-type-2 {
+  color:var(--accent-color);
+}
+.product-card-discount__product-type-3 {
+  color:#f2cb1f;
+}
+.product-card-discount__product-model{
+  margin-bottom: 10px;
+}
+
+.product-card-discount__price{
+  display: flex;
+  flex-direction: row;
+  align-items:baseline;
+  margin-bottom: 70px;
+}
+.product-card-discount__high-price{
+  color:#aeaeae;
+  font-size: 15px;
+  text-decoration: line-through;
+  padding-right: 5px;
+}
+.product-card-discount__low-price-1{
+  color:var(--icon-color);
+  font-size: 23px;
+}
+.product-card-discount__low-price-2{
+  color:var(--accent-color);
+  font-size: 23px;
+}
+.product-card-discount__low-price-3{
+  color:#f2cb1f;
+  font-size: 23px;
+}
+
+.product-card-discount__product-timer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: end;
+}
+
+.product-card-discount__product-timer-countdown{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  
+}
+
+.product-card-discount__product-timer-time{
+  color:#aeaeae;
+  font-size: 14px;
+}
+
+.product-card-discount__product-info{
+    margin-left: 35px;
+    margin-top: 35px;
+}
