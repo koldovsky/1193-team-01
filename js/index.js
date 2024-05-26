@@ -1,5 +1,6 @@
 function init() {
     import('./headphones-carousel.js');
+    import('./customer-review.js');
 }
 
 const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;
