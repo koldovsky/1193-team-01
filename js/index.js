@@ -1,4 +1,5 @@
 function init() {
+    import('./product-tabs.js');
     import('./headphones-carousel.js');
     import('./customer-review.js');
 }

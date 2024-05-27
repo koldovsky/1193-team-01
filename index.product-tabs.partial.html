@@ -9,12 +9,12 @@
     <section class="product-tabs">
       <div class="product-tabs__container">
         <nav class="product-tabs__navigation">
-          <button class="product-tabs__button product-tabs__button--active">Featured</button>
-          <button class="product-tabs__button">Sale</button>
-          <button class="product-tabs__button">New</button>
+          <button class="product-tabs__button product-tabs__button--active" data-tab-name="featured">Featured</button>
+          <button class="product-tabs__button" data-tab-name="sale">Sale</button>
+          <button class="product-tabs__button" data-tab-name="new">New</button>
         </nav>
         <div class="product-tabs__content">
-          <div class="product-tabs__tab product-tabs__tab--active">
+          <div class="product-tabs__tab product-tabs__tab--active" data-tab-name="featured">
             <article class="product-item">
               <a href="product.html" class="product-item__image-link">
                 <img
@@ -76,7 +76,7 @@
             </article>
           </div>
 
-          <div class="product-tabs__tab">
+          <div class="product-tabs__tab" data-tab-name="sale">
             <article class="product-item">
               <a href="product.html" class="product-item__image-link">
                 <img
@@ -137,7 +137,7 @@
             </article>
           </div>
 
-          <div class="product-tabs__tab">
+          <div class="product-tabs__tab" data-tab-name="new">
             <article class="product-item">
               <a href="product.html" class="product-item__image-link">
                 <img
