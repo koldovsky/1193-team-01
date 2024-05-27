@@ -25,6 +25,7 @@
     justify-content: flex-end;
     align-items: center;
     white-space: nowrap;
+
     span {
         width: 5px;
     }
@@ -55,14 +56,17 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
+
             li {
                 text-decoration: none;
                 position: relative;
                 margin-right: 30px;
             }
+
             li:hover {
                 color: var(--castomer-care-font-hover-color);
             }
+
             li::after {
                 content: '';
                 position: absolute;
@@ -73,23 +77,28 @@
                 background-color: var(--castomer-care-font-hover-color);
                 transition: width 1s ease;
             }
+
             li:hover::after {
                 width: 100%;
             }
         }
     }
+
     .social-networks {
         display: flex;
         justify-content: center;
         align-items: center;
+
         li {
             display: flex;
             margin: 0px;
             padding: 5px;
         }
+
         .networks-logo {
             position: relative;
-          }
+        }
+
         .networks-logo a img {
             position: relative;
             margin: 0;
@@ -98,11 +107,13 @@
             width: 100%;
             z-index: 1;
         }
+
         .background-white {
             width: 25px;
             height: 25px;
             background-color: var(--header-networks-background-color);
         }
+
         .nav-title ul {
             display: flex;
             justify-content: space-between;
@@ -111,6 +122,7 @@
             padding: 0;
             margin: 0;
         }
+
         .background-white {
             position: absolute;
             top: 12px;
@@ -120,18 +132,21 @@
             background-color: var(--header-networks-background-color);
             z-index: 0;
         }
+
         .networks-logo:last-child .background-white {
             top: 12px;
             left: 15px;
             width: 40%;
             height: 40%;
-          }
+        }
     }
 }
+
 .column__under-container:first-child {
     margin-left: 0;
     justify-content: flex-start;
 }
+
 .column__under-container:last-child {
     justify-content: space-between;
 }
