@@ -1,3 +1,8 @@
+.max-container {
+    max-width: 1900px;
+    margin: auto;
+  }
+  
 .header__background {
     width: 100%;
     background-color: var(--header-background-color);
@@ -58,7 +63,6 @@
             margin: 0;
 
             li {
-                text-decoration: none;
                 position: relative;
                 margin-right: 30px;
             }
