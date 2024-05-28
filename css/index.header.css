@@ -154,3 +154,10 @@
 .column__under-container:last-child {
     justify-content: space-between;
 }
+
+
+@media (min-width: 490px) and (max-width: 770px) {
+    .email__castomer-care {
+        margin-right: 30px;
+  }
+}

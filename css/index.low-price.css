@@ -12,8 +12,6 @@
   left: 5%;
   word-wrap: break-word;
   font-family: "PT Sans", sans-serif;
-  font-size: 56px;
-  font-weight: 400;
   background-color: var(--castomer-care-background-color);
   text-align: left;
   margin: 0;
@@ -25,6 +23,11 @@
   justify-content: center;
   align-items: center;
 
+  h2 {
+    font-size: 56px;
+    font-weight: 700;
+  }
+
   h3 {
     font-size: 18px;
     font-weight: 400;
@@ -35,7 +38,7 @@
     display: flex;
     color: var(--low-price-button-color);
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 700;
     margin-top: 20px;
     background-color: var(--low-price-button-background-color);
     justify-content: center;
@@ -52,8 +55,6 @@
   .button__shop__container {
     display: flex;
     color: var(--header-background-color);
-    font-size: 15px;
-    font-weight: 400;
     margin-top: 20px;
     margin-left: 35px;
     justify-content: center;
@@ -67,6 +68,8 @@
   .button__shop {
     white-space: nowrap;
     position: relative;
+    font-weight: 700;
+    font-size: 15px;
   }
 
   .button__shop::after {
@@ -91,5 +94,12 @@
     width: 15px;
     height: 4px;
     margin-left: 10px;
+  }
+}
+
+@media (min-width: 490px) and (max-width: 770px) {
+    .overlay__low-price h2 {
+    font-size: 46px;
+    padding-top: 80px; 
   }
 }
