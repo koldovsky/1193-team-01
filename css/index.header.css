@@ -77,6 +77,15 @@
           font-size: 30px;
         }
       }
+      @media (min-width: 1440px) {
+        .under-container {
+          width: 100px;
+        }
+        li {
+          font-size: 20px;
+        }
+        
+      }
 
       li:hover {
         color: var(--castomer-care-font-hover-color);
@@ -172,12 +181,19 @@
   }
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 1440px) {
   .column__castomer-care {
     font-size: 20px;
+  }
+  .email__castomer-care {
+    margin-right: 100px;
   }
 
   .under-container {
     height: 175px;
+  }
+
+  .nav-column__under-container {
+    width: 30%;
   }
 }
