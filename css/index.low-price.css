@@ -98,8 +98,33 @@
 }
 
 @media (min-width: 490px) and (max-width: 770px) {
-    .overlay__low-price h2 {
+  .overlay__low-price h2 {
     font-size: 46px;
-    padding-top: 80px; 
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .low-price {
+    height: 600px;
+  }
+}
+@media (min-width: 1024px) {
+  .overlay__low-price h2 {
+    font-size: 60px;
+    padding-top: 100px;
+  }
+}
+@media (min-width: 1440px) {
+  .overlay__low-price h2 {
+    font-size: 86px;
+    padding-top: 120px;
+  }
+}
+@media (min-width:1900px) {
+  .low-price  {
+    max-width: 1900px;
+    margin: auto;
+    height: 700px;
   }
 }

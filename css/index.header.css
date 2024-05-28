@@ -37,9 +37,9 @@
 }
 
 .logo-company img {
-    width: 114px;
-    height: auto;
-  }
+  width: 114px;
+  height: auto;
+}
 
 .under-container {
   width: 100%;
@@ -58,7 +58,6 @@
     width: 50%;
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
-    font-size: 15px;
     color: var(--castomer-care-font-background-color);
 
     .nav-title {
@@ -71,6 +70,12 @@
       li {
         position: relative;
         margin-right: 30px;
+        font-size: 15px;
+      }
+      @media (min-width: 1900px) {
+        li {
+          font-size: 30px;
+        }
       }
 
       li:hover {
@@ -167,4 +172,12 @@
   }
 }
 
+@media (min-width: 1900px) {
+  .column__castomer-care {
+    font-size: 20px;
+  }
 
+  .under-container {
+    height: 175px;
+  }
+}

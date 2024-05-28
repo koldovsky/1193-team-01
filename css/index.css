@@ -1,5 +1,6 @@
 @import "global.css";
 @import "index.header.css";
+@import "index.header-nav.css";
 @import "index.special-offers.partial.css";
 @import "index.product-tabs.partial.css";
 @import "index.info-columns.css";

@@ -1,5 +1,5 @@
 function init() {
-    import('./header.js');    
+    import('./header-burger-menu.js');    
     import('./product-tabs.js');
     import('./headphones-carousel.js');
     import('./customer-review.js');
