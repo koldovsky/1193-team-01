@@ -1,16 +1,13 @@
-(function() {
-   
-  function showInfo() {
-    const product = JSON.parse(localStorage.product || "{}");
-    if (!product) return;
-    document.querySelector('.main__product-title')
-      .innerText = product.title;
-    document.querySelector('.main__product-info')
-      .innerText = product.code;
-    document.querySelector('.main__product-price')
-      .innerText = product.price;
-  }
+function init() {
+  import('./header-burger-menu.js');    
+  import('./products-service.js');
+  import('./product-main.js');
+}
 
-  showInfo();
+const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;
+let loadedPartialsCount = 0;
 
-})();
+document.body.addEventListener('htmx:afterOnLoad', () => {
+  loadedPartialsCount++;
+  if (loadedPartialsCount === totalPartials) init();
+});

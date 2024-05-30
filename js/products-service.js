@@ -1,6 +1,8 @@
-class ProductsService {
+export class ProductsService {
+    static #instance;
     constructor() {
-        this.products = null;
+        if (!ProductsService.#instance) ProductsService.#instance = this;
+        return ProductsService.#instance;
     }
 
     async getProducts() {
@@ -9,8 +11,9 @@ class ProductsService {
         }
         return this.products;
     }
-}
 
-const productList = new ProductsService();
-await productList.getProducts();
-console.log(productList);
+    async getProductById(id) {
+        const products = await this.getProducts();
+        return products.find(product => product.id === id);
+    }
+}
