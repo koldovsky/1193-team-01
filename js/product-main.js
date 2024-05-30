@@ -5,7 +5,9 @@ const products = await service.getProducts();
 const id = localStorage.getItem("product-page-id");
 
 const findedProduct = products.find((item)=>{
-    return item.id = id;
+    return item.id === id;
 })
+
+console.log(products);
 
 console.log(findedProduct);
