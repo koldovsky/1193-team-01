@@ -1,0 +1,165 @@
+[
+    {
+      "id": 5236,
+      "name": "JBL RR-56",
+      "price": 110.00,
+      "image": "img/index.product-tabs/jbl-rr-56.png",
+      "link": "product.html",
+      "category": "featured",
+      "type": "speakers"
+    },
+    {
+      "id": 4189,
+      "name": "Sennheiser SN-67",
+      "price": 213.00,
+      "image": "img/index.product-tabs/sennheiser-sn-67.png",
+      "link": "product.html",
+      "category": "featured",
+      "type": "headphones"
+    },
+    {
+      "id": 6247,
+      "name": "JBL GT-345",
+      "price": 120.00,
+      "image": "img/index.product-tabs/jbl-gt-345.png",
+      "link": "product.html",
+      "category": "featured",
+      "type": "speakers"
+    },
+    {
+      "id": 1378,
+      "name": "Sony S890",
+      "price": 259.00,
+      "image": "img/index.product-tabs/sony-s899.png",
+      "link": "product.html",
+      "category": "featured",
+      "type": "headphones"
+    },
+    {
+      "id": 9162,
+      "name": "Marshall DR67",
+      "price": 459.00,
+      "image": "img/index.product-tabs/marshall-dr-67.png",
+      "link": "product.html",
+      "category": "sale",
+      "type": "headphones"
+    },
+    {
+      "id": 3702,
+      "name": "V-MODA ER65",
+      "price": 80.00,
+      "image": "img/index.product-tabs/v-moda-er-65.png",
+      "link": "product.html",
+      "category": "sale",
+      "type": "headphones"
+    },
+    {
+      "id": 2951,
+      "name": "Bose G656-A",
+      "price": 65.00,
+      "image": "img/index.product-tabs/bose-g656-a.png",
+      "link": "product.html",
+      "category": "sale",
+      "type": "speakers"
+    },
+    {
+      "id": 7243,
+      "name": "AirPulse R255",
+      "price": 185.00,
+      "image": "img/index.product-tabs/airpulse-r255.png",
+      "link": "product.html",
+      "category": "sale",
+      "type": "headphones"
+    },
+    {
+      "id": 5371,
+      "name": "Sony YT555",
+      "price": 140.00,
+      "image": "img/index.product-tabs/sony-yt555.png",
+      "link": "product.html",
+      "category": "new",
+      "type": "speakers"
+    },
+    {
+      "id": 8369,
+      "name": "Sony TT56",
+      "price": 98.00,
+      "image": "img/index.product-tabs/sony-tt-56.png",
+      "link": "product.html",
+      "category": "new",
+      "type": "headphones"
+    },
+    {
+      "id": 4957,
+      "name": "JBL BR-55",
+      "price": 110.00,
+      "image": "img/index.product-tabs/jbl-br55.png",
+      "link": "product.html",
+      "category": "new",
+      "type": "speakers"
+    },
+    {
+      "id": 2689,
+      "name": "JBL 334WN",
+      "price": 140.00,
+      "image": "img/index.product-tabs/jbl-334wn.png",
+      "link": "product.html",
+      "category": "new",
+      "type": "headphones"
+    },
+    {
+      "id": 7635,
+      "name": "JBL Speaker",
+      "price": 356.00,
+      "image": "img/index.info-columns/columns_background.png",
+      "link": "product.html",
+      "category": "new",
+      "type": "speakers"
+    },
+    {
+      "id": 8214,
+      "name": "JBL 334WN",
+      "price": 140.00,
+      "image": "img/index.headphones-carousel/headphones-jbl-white.png",
+      "link": "product.html",
+      "category": "new",
+      "type": "headphones"
+    },
+    {
+      "id": 1078,
+      "name": "AirPulse BB34",
+      "price": 112.00,
+      "image": "img/index.headphones-carousel/headphones-airpulse-blue.png",
+      "link": "product.html",
+      "category": "new",
+      "type": "headphones"
+    },
+    {
+      "id": 4926,
+      "name": "Bang & Olufsen F112",
+      "price": 145.00,
+      "image": "img/index.headphones-carousel/headphones-bangandolufsen-black.png",
+      "link": "product.html",
+      "category": "new",
+      "type": "headphones"
+    },
+    {
+      "id": 9351,
+      "name": "AirPulse RS45",
+      "price": 195.00,
+      "image": "img/index.headphones-carousel/headphones-airpulse-pink.png",
+      "link": "product.html",
+      "category": "new",
+      "type": "headphones"
+    },
+    {
+      "id": 7148,
+      "name": "Sony TT56",
+      "price": 98.00,
+      "image": "img/index.headphones-carousel/headphonesb-sony-black.png",
+      "link": "product.html",
+      "category": "new",
+      "type": "headphones"
+    }
+  ]
+  
