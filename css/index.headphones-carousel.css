@@ -73,17 +73,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid var( --back-mindblowing-icon);
+    border: 2px solid var(--back-mindblowing-icon);
     padding: 45px 15px;
     width: 250px;
-    height: auto;
+    min-height: 350px;
 
     a {
         text-decoration: none;
         font-family: "PT Sans", sans-serif;
         color: rgb(42, 42, 42);
     }
- 
+
     a:hover {
         text-decoration: underline;
     }
@@ -124,7 +124,7 @@
 }
 
 .headphones-carousel__button-title {
-    background-color: var( --accent-color);
+    background-color: var(--accent-color);
     color: var(--color-jbl-section);
     padding: 18px 18px;
     border: none;
@@ -138,7 +138,7 @@
     white-space: nowrap;
 }
 
-.headphones-carousel__button-title:hover{
+.headphones-carousel__button-title:hover {
     background-color: var(--link-color);
 }
 
