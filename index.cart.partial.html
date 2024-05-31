@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+<body>
+    <div class="cart" id="modal-cart">
+        <div class="cart__inner-container">
+            <div class="cart__content">
+                <div class="cart__header">
+                    <h5 class="cart__title" id="cartLabel">Shopping cart</h5>
+                    <button type="button" class="cart__close-btn" aria-label="Close">
+                        <svg width="100" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" ><path d="M19.7 18.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3L12 13.4l-6.3 6.3c-.4.4-1 .4-1.4 0-.2-.2-.3-.4-.3-.7 0-.3.1-.5.3-.7l6.3-6.3-6.3-6.3c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L13.4 12l6.3 6.3z" fill="currentColor" style=""></path><mask id="a66461cabbe03ca6177c0e922" maskUnits="userSpaceOnUse" x="4" y="4" width="16" height="16" style="" fill="currentColor"><path d="M19.7 18.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3L12 13.4l-6.3 6.3c-.4.4-1 .4-1.4 0-.2-.2-.3-.4-.3-.7 0-.3.1-.5.3-.7l6.3-6.3-6.3-6.3c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L13.4 12l6.3 6.3z" fill="currentColor" style=""></path></mask><g mask="url(#a66461cabbe03ca6177c0e922)" style="" fill="currentColor"><path fill="currentColor" d="M0 0h24v24H0z" style=""></path></g></svg>
+                    </button>
+                </div>
+                <div class="cart__body">
+                    <h6 class="cart__product-title">Products</h6>
+                    <div class="cart__product-container"></div>
+                    
+                    <form class="contact-form">
+                        <div class="contact-form__group row">
+                            <label for="client-name" class="contact-form__label col-4 col-form-label">Name <span class="contact-form__required-sign">*</span></label>
+                            <input class="contact-form__input col-8" type="text" id="client-name" name="name" required>
+                        </div>
+                        <div class="contact-form__group row">
+                            <label for="client-email" class="contact-form__label col-4 col-form-label">Email <span class="contact-form__required-sign">*</span></label>
+                            <input class="contact-form__input col-8" type="email" id="client-email" name="email" required>
+                        </div>
+                        <div class="contact-form__group row">
+                            <label for="client-phone" class="contact-form__label col-4 col-form-label">Phone </label>
+                            <input class="contact-form__input col-8" type="tel" id="client-phone" name="phone" required>
+                        </div>
+                        <div class="contact-form__group row">
+                            <label for="client-comment" class="contact-form__label col-4 col-form-label">Comment</label>
+                            <textarea class="contact-form__textarea col-8" id="client-comment" name="comment"></textarea>
+                        </div>
+                    </form>
+                   
+                </div>
+                <div class="cart__footer">
+                    <button class="cart__button-order">Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/*.cart{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--cart-overlay-background);
+    z-index: 100000;
+    display: flex;
+    overflow: auto;
+}
+
+.cart__inner-container{
+    margin: auto;
+    width: 500px;
+}
+
+.cart__content{
+    display: block;
+    width: 100%;
+    background-color: var(--cart-background);
+}*/
