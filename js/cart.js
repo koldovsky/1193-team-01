@@ -67,8 +67,8 @@ export class Cart {
     let totalQuantity = 0;
 
     for (const productId in this.cart) {
-      const productID = parseInt(productId);
-      const product = await this.productsService.getProductById(productID);
+      console.log(productId, Number(productId), this.cart);
+      const product = await this.productsService.getProductById(Number(productId));
       const quantity = this.cart[productId];
       cartDomString += this.createCartProductDomString(product, quantity);
       total += product.price * this.cart[productId];
