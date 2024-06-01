@@ -136,7 +136,7 @@ export class Cart {
                     ).toFixed(2)}</span>
                 </div>
                 <div class="product-item__delete-col">
-                  <button class="product-item__delete"><img class="product-item__delete-icon" src="img/index.cart.partial/delete.svg"></button>
+                  <button class="product-item__delete"><img class="product-item__delete-icon" src="img/index.cart.partial/delete.svg" alt="Delete Product"></button>
                 </div>
             </div>`;
   }
