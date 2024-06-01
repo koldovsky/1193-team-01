@@ -1,4 +1,5 @@
 import { ProductsService } from './products-service.js';
+import { Cart } from './cart.js';
 
 export class ProductList {
   constructor() {
@@ -51,10 +52,10 @@ export class ProductList {
   addProductToCart(event) {
     const clickedProductItem = event.target.closest('.product-item');
     const id = clickedProductItem.dataset.id;
-      
-     /* const cart = new Cart();
-      cart.addProduct(id);
-      showAlert('Added to cart!');*/
+    const cart = new Cart();
+    cart.addProduct(id);
+    console.log(cart);
+    //showAlert('Added to cart!');
   }
 }
 
@@ -86,5 +87,4 @@ tabButtons.forEach((button) => {
 });
 */
 
-const testList = new ProductList();
-console.log(testList)
+new ProductList();

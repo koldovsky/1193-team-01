@@ -1,4 +1,4 @@
-/*.cart{
+.cart{
     position: fixed;
     left: 0;
     top: 0;
@@ -8,6 +8,10 @@
     z-index: 100000;
     display: flex;
     overflow: auto;
+    display: none;
+    &.active{
+        display: block;
+    }
 }
 
 .cart__inner-container{
@@ -19,4 +23,19 @@
     display: block;
     width: 100%;
     background-color: var(--cart-background);
-}*/
+}
+
+
+/* =================== */
+.product-row{
+    display: flex;
+    .product-row__image-col{
+        width: 100px;
+        .product-row__image{
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+/* =================== */
