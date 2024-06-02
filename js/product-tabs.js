@@ -1,24 +1,26 @@
-import { ProductsService } from './products-service.js';
-import { Cart } from './cart.js';
+import { ProductsService } from "./products-service.js";
+import { Cart } from "./cart.js";
 
 export class ProductList {
   constructor() {
-    this.container = document.querySelector('.product-tabs__content');
+    this.container = document.querySelector(".product-tabs__content");
     this.productsService = new ProductsService();
     this.renderProducts();
   }
   async renderProducts() {
-    let productListDomString = '';
+    let productListDomString = "";
     const products = await this.productsService.getProducts();
-    products.forEach(product => {
+    products.forEach((product) => {
       productListDomString += this.createProductDomString(product);
     });
     this.container.innerHTML = productListDomString;
-     this.addEventListeners();
+    this.addEventListeners();
   }
 
   createProductDomString(product) {
-    return `<article class="product-item ${product.category === 'featured' ? 'product-item__active' : ''}" data-id="${product.id}" data-category="${product.category}">
+    return `<article class="product-item ${
+      product.category === "featured" ? "product-item__active" : ""
+    }" data-id="${product.id}" data-category="${product.category}">
         <a href="product.html" class="product-item__image-link">
           <img
             src="${product.image}"
@@ -34,33 +36,30 @@ export class ProductList {
       </article>`;
   }
   addEventListeners() {
-      this.container.querySelectorAll('.product-item__button').forEach(btn => {
-          btn.addEventListener('click', this.addProductToCart.bind(this));
-      });
-
-      this.container.querySelectorAll('.product-item__image-link, .product-item__name-link').forEach(btn => {
-        btn.addEventListener('click', this.openProductPage.bind(this));
+    this.container.querySelectorAll(".product-item__button").forEach((btn) => {
+      btn.addEventListener("click", this.addProductToCart.bind(this));
     });
+
+    this.container
+      .querySelectorAll(".product-item__image-link, .product-item__name-link")
+      .forEach((btn) => {
+        btn.addEventListener("click", this.openProductPage.bind(this));
+      });
   }
 
-  openProductPage(event){
-    const clickedProductItem = event.target.closest('.product-item');
+  openProductPage(event) {
+    const clickedProductItem = event.target.closest(".product-item");
     const id = parseInt(clickedProductItem.dataset.id);
-    localStorage.setItem("product-page-id",id);
+    localStorage.setItem("product-page-id", id);
   }
 
   addProductToCart(event) {
-    const clickedProductItem = event.target.closest('.product-item');
+    const clickedProductItem = event.target.closest(".product-item");
     const id = clickedProductItem.dataset.id;
     const cart = new Cart();
     cart.addProduct(id);
-    console.log(cart);
-    //showAlert('Added to cart!');
   }
 }
-
-
-
 
 /*const tabButtons = [...document.querySelectorAll(".product-tabs__button")];
 const productTabs = [...document.querySelectorAll(".product-tabs__tab")];

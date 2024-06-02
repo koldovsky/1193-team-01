@@ -25,6 +25,10 @@
     background-color: var(--cart-background);
 }
 
+.cart__no-products-message{
+    display: none;
+}
+
 
 /* =================== */
 .product-row{
