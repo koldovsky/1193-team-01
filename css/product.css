@@ -1,4 +1,6 @@
 @import "global.css";
 @import "index.header.css";
 @import "index.main-product.css";
+@import "index.cart-widget.partial.css";
+@import "index.cart.partial.css";
 @import "index.footer.partial.css";
