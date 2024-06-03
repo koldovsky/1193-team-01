@@ -1,4 +1,5 @@
 import { ProductsService } from "./products-service.js";
+import { Cart } from "./cart.js";
 
 const service = new ProductsService();
 const products = await service.getProducts();
