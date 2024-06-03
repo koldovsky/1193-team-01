@@ -1,5 +1,5 @@
 const slides = [
-         `<article class="headphones-carousel__slide">
+         `<article class="headphones-carousel__slide" data-id="2689">
             <a href="product.html">
                <img
               class="headphones-carousel__slide-img"
@@ -15,7 +15,7 @@ const slides = [
               </button>
             </div>
           </article>`,
-         `<article class="headphones-carousel__slide">
+         `<article class="headphones-carousel__slide" data-id="1078">
             <a href="product.html">
                <img
               class="headphones-carousel__slide-img"
@@ -31,7 +31,7 @@ const slides = [
               </button>
             </div>
           </article>`,
-          `<article class="headphones-carousel__slide">
+          `<article class="headphones-carousel__slide" data-id="4926">
             <a href="product.html">
                 <img
               class="headphones-carousel__slide-img"
@@ -49,7 +49,7 @@ const slides = [
               </button>
             </div>
           </article>`,
-          `<article class="headphones-carousel__slide">
+          `<article class="headphones-carousel__slide" data-id="9351">
             <a href="product.html">
                <img
               class="headphones-carousel__slide-img"
@@ -65,7 +65,7 @@ const slides = [
               </button>
             </div>
           </article>`,
-          `<article class="headphones-carousel__slide">
+          `<article class="headphones-carousel__slide" data-id="8369">
             <a href="product.html">
                <img
               class="headphones-carousel__slide-img"

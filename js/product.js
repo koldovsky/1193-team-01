@@ -2,6 +2,7 @@ function init() {
   import('./header-burger-menu.js');    
   import('./products-service.js');
   import('./product-main-add.js');
+  import('./product-carousel.js');
   import('./product-main.js');
 }
 

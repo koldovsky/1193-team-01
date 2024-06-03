@@ -23,7 +23,7 @@ export class ProductList {
     }" data-id="${product.id}" data-category="${product.category}">
         <a href="product.html" class="product-item__image-link">
           <img
-            src="${product.image}"
+            src="${product.image[0]}"
             alt="${product.name}"
             class="product-item__image"
           />
