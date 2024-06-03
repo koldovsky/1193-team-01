@@ -2,31 +2,25 @@
   background-image: url("../img/index.low-price/men-headphone.png");
   background-size: cover;
   background-position: center;
+  margin: auto;
   background-repeat: no-repeat;
   width: 100%;
   height: 400px;
 }
 
 .overlay__low-price {
-  top: 35%;
-  left: 5%;
   word-wrap: break-word;
   font-family: "PT Sans", sans-serif;
   background-color: var(--castomer-care-background-color);
   text-align: left;
+  border: 0;
   margin: 0;
   padding: 0;
-  border: 0;
-  margin-left: 30px;
+  margin-left: 20px;
   width: 40%;
   color: var(--header-background-color);
   justify-content: center;
   align-items: center;
-
-  h2 {
-    font-size: 56px;
-    font-weight: 700;
-  }
 
   h3 {
     font-size: 18px;
@@ -37,14 +31,9 @@
   .button__low-price {
     display: flex;
     color: var(--low-price-button-color);
-    font-size: 15px;
-    font-weight: 700;
-    margin-top: 20px;
     background-color: var(--low-price-button-background-color);
     justify-content: center;
     align-items: center;
-    width: 10vw;
-    height: 8vh;
     transition: background-color 1s ease;
   }
 
@@ -55,12 +44,10 @@
   .button__shop__container {
     display: flex;
     color: var(--header-background-color);
-    margin-top: 20px;
-    margin-left: 35px;
+    margin-top: 30px;
     justify-content: center;
     align-items: center;
     width: 10vw;
-    height: 8vh;
     max-width: 8vh;
     max-height: 10vw;
   }
@@ -69,7 +56,7 @@
     white-space: nowrap;
     position: relative;
     font-weight: 700;
-    font-size: 15px;
+    align-items: center;
   }
 
   .button__shop::after {
@@ -97,34 +84,119 @@
   }
 }
 
-@media (min-width: 490px) and (max-width: 770px) {
+@media (max-width: 480px) {
+  .buttons__low-price {
+    display: none;
+    span {
+      display: none;
+    }
+    .button__shop__container {
+      display: none;
+    }
+  }
+  .overlay__low-price h3 {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
   .overlay__low-price h2 {
-    font-size: 46px;
-    padding-top: 80px;
+    font-size: 15px;
+    padding-top: 40px;
+  }
+  .button__low-price {
+    font-weight: 400;
+    font-size: 8px;
+    margin-top: 27px;
+    height: 30px;
+    width: 50px;
+  }
+  .button__shop {
+    font-weight: 400;
+    font-size: 8px;
+  }
+  .button__shop__container img {
+    width: 10px;
+  }
+  .button__shop__container {
+    margin-left: 20px;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 481px) and (max-width: 768px) {
+  .overlay__low-price h2 {
+    font-size: 25px;
+    padding-top: 45px;
+  }
+  .button__low-price {
+    font-weight: 400;
+    font-size: 10px;
+    margin-top: 27px;
+    height: 40px;
+    width: 60px;
+  }
+  .button__shop {
+    font-weight: 400;
+    font-size: 10px;
+  }
+  .button__shop__container img {
+    width: 12px;
+  }
+  .button__shop__container {
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1022px) {
+  .overlay__low-price h2 {
+    font-size: 40px;
+    padding-top: 45px;
+  }
+  .button__low-price {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 27px;
+    height: 40px;
+    width: 80px;
+  }
+  .button__shop {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .button__shop__container img {
+    width: 15px;
+  }
+  .button__shop__container {
+    margin-left: 65px;
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1899px) {
+  .overlay__low-price h2 {
+    font-size: 45px;
+    padding-top: 55px;
+  }
+  .button__low-price {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 27px;
+    height: 40px;
+    width: 80px;
+  }
+  .button__shop {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .button__shop__container img {
+    width: 15px;
+  }
+  .button__shop__container {
+    margin-left: 65px;
+  }
+}
+
+@media (min-width: 1900px) {
   .low-price {
-    height: 600px;
-  }
-}
-@media (min-width: 1024px) {
-  .overlay__low-price h2 {
-    font-size: 60px;
-    padding-top: 100px;
-  }
-}
-@media (min-width: 1440px) {
-  .overlay__low-price h2 {
-    font-size: 86px;
-    padding-top: 120px;
-  }
-}
-@media (min-width:1900px) {
-  .low-price  {
     max-width: 1900px;
-    margin: auto;
     height: 700px;
   }
 }

@@ -175,6 +175,15 @@
   justify-content: space-between;
 }
 
+
+@media (max-width: 990px) {
+  .header__background, 
+  .nav-column__under-container,
+  .column__under-container  {
+    display:none;
+  }
+}
+
 @media (min-width: 490px) and (max-width: 770px) {
   .email__castomer-care {
     margin-right: 30px;
