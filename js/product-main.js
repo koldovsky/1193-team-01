@@ -30,5 +30,4 @@ imageSmallProduct.innerHTML = `<img
                     alt="${findedProduct.name}"
                     class="main__product-images"
                     />`;
-console.log(findedProduct);
-console.log(findedProduct.name);
+

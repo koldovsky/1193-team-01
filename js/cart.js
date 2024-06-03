@@ -14,7 +14,7 @@ export class Cart {
   }
 
   addProductOperation(id, quantity) {
-    this.cart[id] = (this.cart[id] || 0) + quantity;
+    this.cart[id] = (this.cart[id] || 0) + Number(quantity);
   }
 
   changeQuantity(value, productId) {
