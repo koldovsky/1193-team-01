@@ -4,6 +4,7 @@ import { Cart } from "./cart.js";
 export class ProductList {
   constructor() {
     this.container = document.querySelector(".product-tabs__content");
+    this.tabButtons = [...document.querySelectorAll(".product-tabs__button")];
     this.productsService = new ProductsService();
     this.renderProducts();
   }
@@ -45,6 +46,32 @@ export class ProductList {
       .forEach((btn) => {
         btn.addEventListener("click", this.openProductPage.bind(this));
       });
+
+    this.tabButtons.forEach((button) => {
+      button.addEventListener("click", this.filterProducts.bind(this));
+    });
+  }
+
+  filterProducts(event) {
+    const thisButton = event.target;
+    if (thisButton.classList.contains("product-tabs__button--active")) return;
+
+    // Open Active Button
+    this.tabButtons.forEach((button) =>
+      button.classList.remove("product-tabs__button--active")
+    );
+    thisButton.classList.add("product-tabs__button--active");
+    
+    const allProductItems = [...document.querySelectorAll(".product-item")];
+    // Filter Items
+    allProductItems.forEach((item) => {
+      console.log(item.dataset.category, thisButton.dataset.tabName);
+      if (item.dataset.category === thisButton.dataset.tabName) {
+        item.classList.add("product-item__active");
+      } else {
+        item.classList.remove("product-item__active");
+      }
+    });
   }
 
   openProductPage(event) {
@@ -60,30 +87,5 @@ export class ProductList {
     cart.addProduct(id);
   }
 }
-
-/*const tabButtons = [...document.querySelectorAll(".product-tabs__button")];
-const productTabs = [...document.querySelectorAll(".product-tabs__tab")];
-tabButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    if (this.classList.contains("product-tabs__button--active")) return;
-
-    // Open Active Button
-    tabButtons.forEach((button) =>
-      button.classList.remove("product-tabs__button--active")
-    );
-    this.classList.add("product-tabs__button--active");
-
-    // Open Active Tab
-    productTabs.forEach((tab) =>
-      tab.classList.remove("product-tabs__tab--active")
-    );
-    const { tabName } = this.dataset;
-    const activeTab = productTabs.find(
-      (tab) => tab.dataset.tabName === tabName
-    );
-    activeTab.classList.add("product-tabs__tab--active");
-  });
-});
-*/
 
 new ProductList();

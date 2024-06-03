@@ -46,4 +46,8 @@
   --cart-widget-color: #ffffff;
   --cart-overlay-background: rgba(0, 0, 0, .7);
   --cart-background: #FFFFFF;
+  --cart-border:  rgba(0, 0, 0, .3);
+  --cart-header-background: #f7f8fa;
+  --cart-form-input-background: rgba(42, 42, 42, 0.12);
+  --cart-form-border: #6c6c6c;
 }

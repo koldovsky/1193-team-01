@@ -15,8 +15,7 @@
 }
 
 .cart__inner-container{
-    margin: auto;
-    width: 500px;
+    margin: 15px;
 }
 
 .cart__content{
@@ -25,21 +24,101 @@
     background-color: var(--cart-background);
 }
 
-.cart__no-products-message{
-    display: none;
-}
-
-
-/* =================== */
-.product-row{
+.cart__header{
     display: flex;
-    .product-row__image-col{
-        width: 100px;
-        .product-row__image{
-            display: block;
-            width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cart-header-background);
+    padding: 10px 0 10px 20px;
+    .cart__title{
+        font-size: 16px;
+    }
+    .cart__close-btn{
+        width: 40px;
+        height: 40px;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        cursor: pointer;
+        .cart__close-icon{
+            width: 20px;
+            height: auto;
         }
     }
 }
 
-/* =================== */
+.cart__body{
+    margin: 20px 20px 20px 20px;
+    .cart__product-title{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .cart__product-container{
+
+    }
+}
+
+.product-row{
+    display: grid;
+    grid-template-areas: 
+            "image title delete"
+            "image count delete"
+            "image price delete";
+    grid-template-columns: 50px 1fr auto;
+    grid-column-gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--cart-border);
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    .product-row__image-col{
+        grid-area: image;
+        display: flex;
+        align-items: center;
+       .product-row__image{
+            width: 100%;
+            height: auto;
+       }
+    }
+    .product-row__title-col{
+        grid-area: title;
+        .product-row__title{
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+    .product-row__count-col{
+        grid-area: count;
+        padding: 3px 0;
+        .product-row__count{
+            width: 40px;
+            height: 25px;
+            border-radius: 3px;
+            font-size: 14px;
+            border: 1px solid var(--cart-border);
+            outline: none;
+        }
+    }
+    .product-row__price-col{
+        grid-area: price;
+        .product-row__price{
+
+        }
+    }
+    .product-item__delete-col{
+        grid-area: delete;
+        display: flex;
+        align-items: center;
+        .product-item__delete{
+
+        }
+    }
+}
+
+.cart__no-products-message{
+    display: none;
+}
