@@ -1,123 +1,114 @@
-const slides = [
-         `<article class="headphones-carousel__slide">
-            <a href="product.html">
-               <img
-              class="headphones-carousel__slide-img"
-              src="img/index.headphones-carousel/headphones-jbl-white.png"
-              alt="JBL 334WN"
-            />
-            <h3 class="headphones-carousel__slide-title">JBL 334WN</h3>
-            </a>
-            <p class="headphones-carousel__slide-price">$140,00</p>
-            <div class="headphones-carousel__slide-button">
-              <button class="headphones-carousel__button-title">
-                Add to cart
-              </button>
-            </div>
-          </article>`,
-         `<article class="headphones-carousel__slide">
-            <a href="product.html">
-               <img
-              class="headphones-carousel__slide-img"
-              src="img/index.headphones-carousel/headphones-airpulse-blue.png"
-              alt="AirPulse BB34"
-            />
-            <h3 class="headphones-carousel__slide-title">AirPulse BB34</h3>
-            </a>
-            <p class="headphones-carousel__slide-price">$112,00</p>
-            <div class="headphones-carousel__slide-button">
-              <button class="headphones-carousel__button-title">
-                Add to cart
-              </button>
-            </div>
-          </article>`,
-          `<article class="headphones-carousel__slide">
-            <a href="product.html">
-                <img
-              class="headphones-carousel__slide-img"
-              src="img/index.headphones-carousel/headphones-bangandolufsen-black.png"
-              alt="Bang & Olufsen F112"
-            />
-            <h3 class="headphones-carousel__slide-title">
-              Bang & Olufsen F112
-            </h3>
-            </a>
-            <p class="headphones-carousel__slide-price">$145,00</p>
-            <div class="headphones-carousel__slide-button">
-              <button class="headphones-carousel__button-title">
-                Add to cart
-              </button>
-            </div>
-          </article>`,
-          `<article class="headphones-carousel__slide">
-            <a href="product.html">
-               <img
-              class="headphones-carousel__slide-img"
-              src="img/index.headphones-carousel/headphones-airpulse-pink.png"
-              alt="AirPulse RS45"
-            />
-            <h3 class="headphones-carousel__slide-title">JBL 334WN</h3>
-            </a>
-            <p class="headphones-carousel__slide-price">$195,00</p>
-            <div class="headphones-carousel__slide-button">
-              <button class="headphones-carousel__button-title">
-                Add to cart
-              </button>
-            </div>
-          </article>`,
-          `<article class="headphones-carousel__slide">
-            <a href="product.html">
-               <img
-              class="headphones-carousel__slide-img"
-              src="img/index.headphones-carousel/headphonesb-sony-black.png"
-              alt="Sony TT56"
-            />
-            <h3 class="headphones-carousel__slide-title">Sony TT56</h3>
-            </a>
-            <p class="headphones-carousel__slide-price">$98,00</p>
-            <div class="headphones-carousel__slide-button">
-              <button class="headphones-carousel__button-title">
-                Add to cart
-              </button>
-            </div>
-          </article>`,
-];
+import { ProductsService } from "./products-service.js";
+import { Cart } from "./cart.js";
 
-let slideIdx = 0;
+export class ProductList {
+  constructor() {
+    this.container = document.querySelector(".headphones-carousel__slides");
+    this.productsService = new ProductsService();
+    this.renderProducts();
+    this.slideIdx = 0;
+    this.renderSlide();
+    this.btnNext = document.querySelector(".headphones-carousel__btn-next");
+    this.btnPrev = document.querySelector(".headphones-carousel__btn-prev");
+    this.btnNext.addEventListener("click", this.nextSlide.bind(this));
+    this.btnPrev.addEventListener("click", this.prevSlide.bind(this));
+    window.addEventListener("resize", this.renderSlide.bind(this));
+  }
 
-function renderSlide() {
-  const slideContainer = document.querySelector(".headphones-carousel__slides");
-  slideContainer.innerHTML = slides[slideIdx];
-  if (window.matchMedia("(min-width:768px)").matches) {
-    const secondSlideIdx = slideIdx + 1 >= slides.length ? 0 : slideIdx + 1;
-    slideContainer.innerHTML += slides[secondSlideIdx];
-    if (window.matchMedia("(min-width:980px)").matches) {
-      const thirdSlideIdx = secondSlideIdx + 1 >= slides.length ? 0 : secondSlideIdx + 1;
-      slideContainer.innerHTML += slides[thirdSlideIdx];
-      if (window.matchMedia("(min-width:1024px").matches) {
-        const fourthSlideIdx = thirdSlideIdx + 1 >= slides.length ? 0 : thirdSlideIdx + 1;
-        slideContainer.innerHTML += slides[fourthSlideIdx];
+  async renderProducts() {
+    let productListDomString = "";
+    const products = await this.productsService.getProducts();
+    const lastFiveProducts = products.slice(-5);
+    lastFiveProducts.forEach((product) => {
+      productListDomString += this.slides(product);
+    });
+    this.container.innerHTML = productListDomString;
+    this.addEventListeners();
+  }
+
+  slides(product) {
+    return `<article class="headphones-carousel__slide" data-id="${product.id}">
+       <a href="product.html" class="headphones-carousel__slide-link">
+          <img
+         class="headphones-carousel__slide-img"
+         src="${product.image}"
+         alt="${product.name}"
+       />
+       <h3 class="headphones-carousel__slide-title">${product.name}</h3>
+       </a>
+       <p class="headphones-carousel__slide-price">$${product.price.toFixed(
+         2
+       )}</p>
+       <div class="headphones-carousel__slide-button">
+         <button class="headphones-carousel__button-title" data-id="${
+           product.id
+         }">
+           Add to cart
+         </button>
+       </div>
+     </article>`;
+  }
+
+  renderSlide() {
+    const slideContainer = document.querySelector(
+      ".headphones-carousel__slides"
+    );
+    slideContainer.innerHTML = this.slides[this.slideIdx];
+    if (window.matchMedia("(min-width:768px)").matches) {
+      const secondSlideIdx =
+        this.slideIdx + 1 >= this.slides.length ? 0 : this.slideIdx + 1;
+      slideContainer.innerHTML += this.slides[secondSlideIdx];
+      if (window.matchMedia("(min-width:980px)").matches) {
+        const thirdSlideIdx =
+          secondSlideIdx + 1 >= this.slides.length ? 0 : secondSlideIdx + 1;
+        slideContainer.innerHTML += this.slides[thirdSlideIdx];
+        if (window.matchMedia("(min-width:1024px").matches) {
+          const fourthSlideIdx =
+            thirdSlideIdx + 1 >= this.slides.length ? 0 : thirdSlideIdx + 1;
+          slideContainer.innerHTML += this.slides[fourthSlideIdx];
+        }
       }
     }
   }
+
+  nextSlide() {
+    this.slideIdx =
+      this.slideIdx + 1 >= this.slides.length ? 0 : this.slideIdx + 1;
+    renderSlide();
+  }
+
+  prevSlide() {
+    this.slideIdx =
+      this.slideIdx - 1 < 0 ? this.slides.length - 1 : this.slideIdx - 1;
+    renderSlide();
+  }
+
+  addEventListeners() {
+    this.container
+      .querySelectorAll(".headphones-carousel__button-title")
+      .forEach((btn) => {
+        btn.addEventListener("click", this.addProductToCart.bind(this));
+      });
+
+    this.container
+      .querySelectorAll(".headphones-carousel__slide-link")
+      .forEach((link) => {
+        link.addEventListener("click", this.clickOnProductLink.bind(this));
+      });
+  }
+
+  clickOnProductLink(event) {
+    const productLink = event.target.closest(".headphones-carousel__slide");
+    const id = parseInt(productLink.dataset.id);
+    localStorage.setItem("product-page-id", id);
+  }
+
+  addProductToCart(event) {
+    const button = event.target.closest(".headphones-carousel__button-title");
+    const id = button.dataset.id;
+    const cart = new Cart();
+    cart.addProduct(id);
+  }
 }
 
-function nextSlide() {
-  slideIdx = slideIdx + 1 >= slides.length ? 0 : slideIdx + 1;
-  renderSlide();
-}
-
-function prevSlide() {
-  slideIdx = slideIdx - 1 < 0 ? slides.length - 1 : slideIdx - 1;
-  renderSlide();
-}
-
-renderSlide();
-
-const btnNext = document.querySelector(".headphones-carousel__btn-next");
-btnNext.addEventListener("click", nextSlide);
-
-const btnPrev = document.querySelector(".headphones-carousel__btn-prev");
-btnPrev.addEventListener("click", prevSlide);
-
-window.addEventListener("resize", renderSlide);
+new ProductList();
