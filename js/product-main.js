@@ -1,4 +1,5 @@
 import { ProductsService } from "./products-service.js";
+import { Cart } from "./cart.js";
 
 const service = new ProductsService();
 const products = await service.getProducts();
@@ -20,15 +21,14 @@ codeProduct.innerText += findedProduct.code;
 priceProduct.innerText += findedProduct.price;
 decscriptionProduct.innerHTML = findedProduct.description;
 imageBigProduct.innerHTML = `<img
-                    src="${findedProduct.image}"
+                    src="${findedProduct.image[0]}"
                     alt="${findedProduct.name}"
-                    class="main__product-image"
-                    />`;
+                    cl;ass="main__product-image"
+                    />`
 imageSmallProduct.innerHTML = `<img
                     width="104"
-                    src="${findedProduct.image}"
+                    src="${findedProduct.image[0]}"
                     alt="${findedProduct.name}"
                     class="main__product-images"
                     />`;
-console.log(findedProduct);
-console.log(findedProduct.name);
+

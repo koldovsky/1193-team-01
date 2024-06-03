@@ -22,6 +22,16 @@
       data-hx-swap="outerHTML"
       data-hx-get="index.header.partial.html"
     ></header>
+    <div
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="index.cart-widget.partial.html"
+    ></div>
+    <div
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="index.cart.partial.html"
+    ></div>
     <main class="main__product">
       <div class="main__container">
         <a href="index.html" class="main__product-link">Store homepage</a>
@@ -74,18 +84,20 @@
           <section class="main__product-section__right">
             <p class="main__product-check">In stock</p>
             <h2 class="main__product-title"></h2>
-            <p class="main__product-info">Product code: </p>
+            <p class="main__product-info">Product code:</p>
             <h3 class="main__product-price">$</h3>
-            <form action="" class="main__product-form">
+            <form action="" class="main__product-form" id="product-form">
               <input
                 type="number"
                 name="number"
                 value="1"
+                min="0"
+                max="99"
                 id="number"
                 class="main__product-number"
               />
               <input
-                type="button"
+                type="submit"
                 value="ADD TO CART"
                 class="main__product-button"
               />
@@ -105,6 +117,14 @@
           </section>
         </section>
       </div>
+      <div data-hx-trigger="load"
+        data-hx-swap="outerHTML" 
+        data-hx-get="index.cart-widget.partial.html"
+       ></div>
+      <div data-hx-trigger="load"
+        data-hx-swap="outerHTML" 
+        data-hx-get="index.cart.partial.html"
+       ></div>
     </main>
     <footer
       data-hx-trigger="load"
