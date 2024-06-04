@@ -74,7 +74,7 @@
     justify-content: space-between;
     border: 2px solid var(--back-mindblowing-icon);
     padding: 45px 15px;
-    width: 250px;
+    /* width: 250px; */
     min-height: 350px;
 
     a {
