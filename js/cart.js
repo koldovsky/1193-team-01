@@ -42,11 +42,12 @@ export class Cart {
     document.querySelector(".cart__footer").style.display = "none";
     document.querySelector(".cart__no-products-message").style.display =
       "block";
+    document.querySelector(".cart__no-products-title").innerHTML = 'Shopping cart is empty<br>Continue shopping to add product to your cart';
   }
 
   showNotEmptyMessage() {
     document.querySelector(".cart__body").style.display = "block";
-    document.querySelector(".cart__footer").style.display = "block";
+    document.querySelector(".cart__footer").style.display = "flex";
     document.querySelector(".cart__no-products-message").style.display = "none";
   }
 
@@ -65,6 +66,10 @@ export class Cart {
     document.querySelector(".cart-widget").addEventListener("click", () => {
       this.showCart();
     });
+
+    document
+      .querySelector(".cart__button-order")
+      .addEventListener("click", this.order.bind(this));
   }
 
   async renderCart() {
@@ -155,19 +160,22 @@ export class Cart {
             </div>`;
   }
 
-  /*
+  async order(ev) {
+    const form = document.querySelector(".contact-form");
+    if (!form.checkValidity()) {
+      console.log("not validate"); 
+      return;
+    }
+   
+    ev.preventDefault();
     
-    
-    async order(ev) {
-      if (Object.keys(this.cart).length === 0) return showAlert("Please choose products to order", false);
-      const form = document.querySelector(".form-contacts");
-      if (!form.checkValidity()) return showAlert("Please fill form correctly", false);
-      ev.preventDefault();
-      const data = new FormData();
-      data.append("cart", JSON.stringify(this.cart));
-      data.append("name", form.querySelector("input[name=name]").value);
-      data.append("email", form.querySelector("input[name=email]").value);
-      fetch("https://formspree.io/f/mrgjwwro", {
+    const data = new FormData();
+    const name = form.querySelector("input[name=name]").value;
+    data.append("cart", JSON.stringify(this.cart));
+    data.append("name", name);
+    data.append("email", form.querySelector("input[name=email]").value);
+
+    fetch("https://formspree.io/f/mrgnwyor", {
         method: "POST",
         headers: {
           'Accept': 'application/json'
@@ -179,10 +187,10 @@ export class Cart {
           this.cart = {};
           this.saveCart();
           this.renderCart();
-          showAlert("Thank you! ");
-          document.querySelector("#modal-cart .close-btn").click();
+          document.querySelector(".cart__no-products-title").innerHTML = `${name}, thank you for your order, we will contact you as soon as possible! <br> Stay Tuned :)`;
         })
-        .catch((error) => showAlert("There is an error: " + error, false));
-    }*/
+        .catch((error) => console.log('There is an error'));
+        
+  }
 }
 new Cart();

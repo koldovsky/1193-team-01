@@ -1,4 +1,5 @@
 function init() {
+    import('https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js');
     import('./header-burger-menu.js');    
     import('./product-tabs.js');
     import('./headphones-carousel.js');
