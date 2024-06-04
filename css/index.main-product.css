@@ -35,6 +35,7 @@ img {
   text-decoration: none;
   font-size: 20px;
 }
+
 .main__product-carousel {
   display: flex;
   justify-content: center;
@@ -73,7 +74,7 @@ img {
     margin-right: 30px;
   }
 
-  .main__product-img { 
+  .main__product-img {
     min-height: 39px;
     max-height: 79px;
   }
@@ -117,6 +118,11 @@ img {
   border: none;
   background-color: var(--bottom-color);
   color: #fff;
+}
+
+.main__product-button:hover {
+  background-color: var(--text-dark-color);
+  transition: background-color 0.3s ease;
 }
 
 .main__product-subtitle {

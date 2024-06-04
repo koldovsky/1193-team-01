@@ -59,6 +59,11 @@
 .product-item {
   padding: 31px 29px;
   border: 1px solid var(--product-grid-border);
+  display: none;
+
+  &.product-item__active{
+    display: block;
+  }
 
   .product-item__image-link {
     display: block;
