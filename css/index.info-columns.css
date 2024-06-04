@@ -193,6 +193,11 @@
   text-transform: uppercase;
 }
 
+.info-columns__button-buy:hover {
+  background-color: var(--text-dark-color);
+  transition: background-color 0.3s ease;
+}
+
 .info-columns__button-models {
   width: 166px;
   height: 65px;
@@ -200,4 +205,9 @@
   color: var(--color-jbl-section);
   border: none;
   text-transform: uppercase;
+}
+
+.info-columns__button-models:hover {
+  background-color: var(--bottom-color);
+  transition: background-color 0.3s ease;
 }
