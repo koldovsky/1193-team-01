@@ -1,17 +1,119 @@
-.header__nav {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+.navigation-menu-block {
+  background-color: var(--header-networks-background-color);
+  height: 100vh;
+  margin-top: -0vh;
 }
-.header__nav-logo img {
-  width: 114px;
-  height: 64px;
-  padding-top: 30px;
+.navigation-logo {
+  display: flex;
+  align-items: center;
+  padding: 30px 0px 0px 20px;
+}
+.menu-btn {
+  margin-left: 80%;
+}
+.navigation-logo img {
+  width: 125px;
+  height: 70px;
+}
+
+.navigation-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.navigation-list li {
+  margin: 5px;
+}
+
+.navigation-list li a {
+  color: var(--castomer-care-font-background-color);
+  text-decoration: none;
+}
+
+.navigation-social-networks {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.navigation-social-networks li {
+  margin: 0 10px;
+}
+
+.navigation-social-networks li a img {
+  width: 30px;
+  height: 30px;
+}
+
+.navigation-customer-care {
+  margin: 5px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--castomer-care-font-background-color);
+  * {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--castomer-care-font-background-color);
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 990px) and (max-width: 1022px) {
+  .navigation-customer-care {
+    font-size: 15px;
+    * {
+      font-size: 15px;
+    }
+  }
+  .navigation-list {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1898px) {
+  .navigation-customer-care {
+    font-size: 20px;
+    * {
+      font-size: 20px;
+    }
+  }
+  .navigation-list {
+    font-size: 25px;
+  }
+  .navigation-social-networks li a img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 1899px)  {
+  .navigation-customer-care {
+    font-size: 25px;
+    * {
+      font-size: 25px;
+    }
+  }
+  .navigation-list {
+    font-size: 30px;
+  }
+  .navigation-social-networks li a img {
+    width: 45px;
+    height: 45px;
+  }
 }
