@@ -15,7 +15,7 @@ export class ProductList {
   async init() {
     await this.renderProducts();
     this.renderSlide();
-    this.addEventListeners();
+    this.addEventListeners(); 
   }
 
   async renderProducts() {
@@ -57,13 +57,14 @@ export class ProductList {
         const thirdSlideIdx =
           secondSlideIdx + 1 >= this.headphones.length ? 0 : secondSlideIdx + 1;
         this.container.innerHTML += this.slides(this.headphones[thirdSlideIdx]);
-        if (window.matchMedia("(min-width:1024px").matches) {
+        if (window.matchMedia("(min-width:1024px)").matches) {
           const fourthSlideIdx =
             thirdSlideIdx + 1 >= this.headphones.length ? 0 : thirdSlideIdx + 1;
           this.container.innerHTML += this.slides(this.headphones[fourthSlideIdx]);
         }
       }
     }
+    this.addProductButtonsEventListeners();
   }
 
   nextSlide() {
@@ -82,7 +83,9 @@ export class ProductList {
     this.btnNext.addEventListener("click", this.nextSlide.bind(this));
     this.btnPrev.addEventListener("click", this.prevSlide.bind(this));
     window.addEventListener("resize", this.renderSlide.bind(this));
+  }
 
+  addProductButtonsEventListeners() {
     this.container
       .querySelectorAll(".headphones-carousel__button-title")
       .forEach((btn) => {
