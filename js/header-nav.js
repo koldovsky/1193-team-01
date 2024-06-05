@@ -1,14 +1,20 @@
 const body = document.querySelector("body");
-const header = document.querySelector(".header");
-const btnSub = document.querySelector(".menu-btn");
+const nav = document.querySelector(".navigation-menu-block");
+const btnSub = document.querySelector(".nav-menu-btn");
+const btnSubTwo = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".navigation-menu");
 
 btnSub.addEventListener("click", () => {
   body.classList.toggle("overflow-hidden");
-  header.classList.toggle("nav-visible");
+  nav.classList.toggle("nav-visible");
+});
+
+btnSubTwo.addEventListener("click", () => {
+  body.classList.toggle("overflow-hidden");
+  nav.classList.toggle("nav-visible");
 });
 
 navLinks.addEventListener("click", () => {
   body.classList.remove("overflow-hidden");
-  header.classList.remove("nav-visible");
+  nav.classList.remove("nav-visible");
 });

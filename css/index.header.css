@@ -20,7 +20,7 @@
 }
 
 .tel-column__castomer-care {
-  color: var(--castomer-care-color);  
+  color: var(--castomer-care-color);
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -35,6 +35,12 @@
   span {
     width: 5px;
   }
+}
+
+.nav-menu-btn {
+  display: none;
+  position: absolute;
+  left: 80%;
 }
 
 .logo-company img {
@@ -180,6 +186,9 @@
   .nav-column__under-container,
   .column__under-container {
     display: none;
+  }
+  .nav-menu-btn {
+    display: block;
   }
 }
 
