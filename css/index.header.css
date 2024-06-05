@@ -20,6 +20,7 @@
 }
 
 .tel-column__castomer-care {
+  color: var(--castomer-care-color);  
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -84,7 +85,6 @@
         li {
           font-size: 20px;
         }
-        
       }
 
       li:hover {
@@ -175,12 +175,11 @@
   justify-content: space-between;
 }
 
-
 @media (max-width: 990px) {
-  .header__background, 
+  .header__background,
   .nav-column__under-container,
-  .column__under-container  {
-    display:none;
+  .column__under-container {
+    display: none;
   }
 }
 

@@ -1,7 +1,7 @@
 const body = document.querySelector("body");
 const header = document.querySelector(".header");
-const btnSub = document.querySelector(".header__menu-btn");
-const navLinks = document.querySelector(".header__nav-menu");
+const btnSub = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".navigation-menu");
 
 btnSub.addEventListener("click", () => {
   body.classList.toggle("overflow-hidden");

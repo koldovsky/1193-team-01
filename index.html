@@ -19,11 +19,18 @@
   </head>
 
   <body>
-    <header
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="index.header.partial.html"
-    ></header>
+    <header class="header">
+      <nav
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.header-nav.partial.html"
+      ></nav>
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.header.partial.html"
+      ></div>
+    </header>
     <main>
       <div
         data-hx-trigger="load"
@@ -51,23 +58,25 @@
         data-hx-get="index.headphones-carousel.partial.html"
       ></div>
       <div
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="index.product-discount.partial.html"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.product-discount.partial.html"
       ></div>
       <div
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.customer-review.partial.html"
       ></div>
-      <div data-hx-trigger="load"
-        data-hx-swap="outerHTML" 
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
         data-hx-get="index.cart-widget.partial.html"
-       ></div>
-      <div data-hx-trigger="load"
-        data-hx-swap="outerHTML" 
+      ></div>
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
         data-hx-get="index.cart.partial.html"
-       ></div>
+      ></div>
     </main>
     <footer
       data-hx-trigger="load"
